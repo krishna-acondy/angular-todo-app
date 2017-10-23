@@ -1,0 +1,13 @@
+<div class='todo-container'>
+  <div class='controls'>
+    <input class='todo-textbox' type='text' placeholder='Enter to-do' #newTodo/>
+    <button class='add-button' (click)='add(newTodo.value)'>+</button>
+  </div>
+  <div *ngFor='let todo of todos'
+    class='todo'
+    [ngClass]="{'done': todo.done, 'not-done': !todo.done}"
+    (click)='toggle(todo)'>
+    <span>{{todo.text}}</span>
+    <span class='remove-button' (click)='remove(todo)'>x</span>
+  </div>
+</div>

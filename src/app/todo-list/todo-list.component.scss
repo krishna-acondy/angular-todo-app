@@ -1,0 +1,51 @@
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    
+    .controls {
+        display: flex;
+        flex-direction: row;
+        margin: 0.5%;
+        
+        .todo-textbox {
+            border-radius: 5px;
+            border: 1px solid #d9d9d9;
+            width: 25%;
+            padding: 1.5%;
+            font-size: 36px;
+        }
+
+        .add-button {
+            width: 50px;
+            border-radius: 5px;
+            font-size: 36px;
+            color: #45d197;
+            border: 1px solid #45d197;
+            background: none;
+            margin-left: 1%;
+        }
+    }
+
+    .todo {
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        padding: 1%;
+        font-size: 30px;
+        margin: 0.5%;
+
+        &.done {
+            background-color: #45d197;
+        }
+
+        &.not-done {
+            background-color: #d45353;
+        }
+    }
+
+    .remove-button {
+        cursor: pointer;
+        color: #f1f1f1;
+        float: right;
+    }
+}
