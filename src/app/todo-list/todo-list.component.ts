@@ -1,3 +1,4 @@
+import { TodoService } from './todo.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,12 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  @Input()
   todos: any[] = [];
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.todos = this.todoService.list();
   }
 
   toggle(todo) {
